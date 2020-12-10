@@ -20,7 +20,7 @@ public class Aluno extends PessoaSenac implements Serializable{
         
     }
 
-    public Aluno(String matricula, Integer id, String nome, String cpf, String rg, String email, String endereco) {
+    public Aluno(String matricula, Integer id, String nome, String cpf, String rg, String email) {
         super(id, nome, cpf, rg, email);
         this.matricula = matricula;
     }

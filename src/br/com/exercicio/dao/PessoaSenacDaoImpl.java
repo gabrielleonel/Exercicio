@@ -37,11 +37,6 @@ public class PessoaSenacDaoImpl {
             resultSet.next();
             pessoa.setId(resultSet.getInt(1));
 
-            TelefoneDaoImpl telefoneDaoImpl = new TelefoneDaoImpl();
-            telefoneDaoImpl.salvarTelefone(pessoa.getTelefones(), pessoa.getId(), conexao);
-
-            EnderecoDaoImpl enderecoDaoImpl = new EnderecoDaoImpl();
-            enderecoDaoImpl.salvar(pessoa.getEndereco(), pessoa.getId(), conexao);
 
         } catch (SQLException e) {
             System.err.println("Erro ao salvar PessoaSenac " + e.getMessage());
